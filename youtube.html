@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Clone</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <span class="material-icons icon-btn" id="menu-btn">menu</span>
+      <div class="logo" id="home-logo">
+        <span class="logo-icon">▶</span>
+        <span class="logo-text">YouTube</span>
+      </div>
+    </div>
+
+    <div class="nav-center">
+      <form id="search-form" class="search-box">
+        <input type="text" id="search-input" placeholder="Search" autocomplete="off">
+        <button type="submit" id="search-btn" title="Search">
+          <span class="material-icons">search</span>
+        </button>
+      </form>
+    </div>
+
+    <div class="nav-right">
+      <div class="user-avatar">U</div>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="main-container">
+
+    <!-- Left Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-item active" data-query="trending">
+        <span class="material-icons">home</span>
+        <span>Home</span>
+      </div>
+      <div class="sidebar-item" data-query="gaming">
+        <span class="material-icons">sports_esports</span>
+        <span>Gaming</span>
+      </div>
+      <div class="sidebar-item" data-query="music">
+        <span class="material-icons">music_note</span>
+        <span>Music</span>
+      </div>
+      <div class="sidebar-item" data-query="web development coding">
+        <span class="material-icons">code</span>
+        <span>Coding</span>
+      </div>
+      <div class="sidebar-item" data-query="science technology">
+        <span class="material-icons">science</span>
+        <span>Tech & Science</span>
+      </div>
+      <div class="sidebar-item" data-query="news">
+        <span class="material-icons">article</span>
+        <span>News</span>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="content">
+      <!-- Category Pills -->
+      <div class="category-bar" id="category-bar">
+        <button class="chip active" data-query="trending">All</button>
+        <button class="chip" data-query="javascript tutorial">JavaScript</button>
+        <button class="chip" data-query="lofi music">Lo-Fi Music</button>
+        <button class="chip" data-query="pc gaming">Gaming</button>
+        <button class="chip" data-query="4k nature">4K HDR</button>
+        <button class="chip" data-query="podcasts">Podcasts</button>
+        <button class="chip" data-query="space documentary">Space</button>
+      </div>
+
+      <!-- Embedded Video Player -->
+      <section class="player-section hidden" id="player-section">
+        <div class="video-wrapper">
+          <iframe id="video-player" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="player-details">
+          <div>
+            <h2 id="player-title">Video Title</h2>
+            <p id="player-channel" class="player-meta">Channel Name</p>
+          </div>
+          <button id="close-player-btn" class="btn-danger">Close Player</button>
+        </div>
+      </section>
+
+      <!-- Video Feed Grid -->
+      <section class="video-grid" id="video-grid"></section>
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
